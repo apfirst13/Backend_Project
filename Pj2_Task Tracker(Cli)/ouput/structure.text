@@ -31,3 +31,7 @@ task-cli list
 task-cli list done
 task-cli list todo
 task-cli list in-progress
+
+#step
+step1 add task
+step2 start,done

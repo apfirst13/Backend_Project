@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="action_length.php">
+    <link rel="stylesheet" href="action_weigth.php">
+    <link rel="stylesheet" href="action_temp.php">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="length.html">
+    <link rel="stylesheet" href="weight.html">
+    <link rel="stylesheet" href="temp.html">
+    <title>Unit Converter</title>
+
+</head>
+
+<body>
+    <h1>Unit Converter</h1>
+    <!-- categories  -->
+    <!-- <div class="categories">
+        <h2><a href="length.html">Length</a></h2>
+        <h2><a href="weight.html">Weight</a></h2>
+        <h2><a href="temp.html">Temperature</a></h2>
+    </div> -->
+    <ul>
+        <li><a href="1index.html" target="_self">Length</a></li>
+        <li><a href="2weight.html"target="_self">Weight</a></li>
+        <li><a href="3temp.html" target="_self">Temperature</a></li>
+    </ul>
+
+    <form action="action_length.php" method="get">
+
+        <label for="Length">Enter the length to convert:
+        </label><br>
+        <input type="text" id="Length" name="Length" >
+        <br>
+        <label for="UnitFrom">Unit to Convert From:</label>
+        <br>
+        <select id="UnitFrom" name="UnitFrom">
+            <option value="millimeter" >Millimeter</option>
+          -<option value="centimeter">Centimeter</option>
+          -<option value="meter">Meter</option>
+          -<option value="kilometer">Kilometer</option>
+          <option value="inch" >Inch </option>
+          -<option value="feet" >Feet</option>
+          <option value="yard" >Yard</option>
+          <option value="mile" >Mile</option>
+        </select>   
+    
+        <br>
+
+    <label for="UnitTo">Unit to Convert to:</label><br>
+    <select id="UnitTo" name="UnitTo">
+        <option value="millimeter" >Millimeter</option>
+          <option value="centimeter">Centimeter</option>
+          <option value="kilometer">Kilometer</option>
+          <option value="meter">Meter</option>
+          <option value="inch" >Inch </option>
+          <option value="feet" >Feet</option>
+          <option value="yard" >Yard</option>
+          <option value="mile" >Mile</option>
+    </select>
+        <br><br>
+        <input type="submit" value="Convert">
+    </form>         
+
+    <!-- <form action="welcome.php" method="get">
+        First Name: <input type="text" name="name"><br>
+        Nickname: <input type="text" name="nickname"><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+
+    <!-- <button>Convert</button> -->
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="action_length.php">
+    <link rel="stylesheet" href="action_weigth.php">
+    <link rel="stylesheet" href="action_temp.php">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="length.html">
+    <link rel="stylesheet" href="weight.html">
+    <link rel="stylesheet" href="temp.html">
+    <title>Unit Converter</title>
+
+</head>
+
+<body>
+    <h1>Unit Converter</h1>
+
+    <ul>
+        <li><a href="1index.html" target="_self">Length</a></li>
+        <li><a href="2weight.html"target="_self">Weight</a></li>
+        <li><a href="3temp.html" target="_self">Temperature</a></li>
+    </ul>
+
+    <form action="action_temp.php" method="get">
+
+        <label for="Temp">Enter the temp to convert:
+        </label><br>
+        <!-- ส่งค่า weight -->
+        <input type="text" id="temp" name="Temp" >
+        <br>
+        <label for="UnitFrom">Unit to Convert From:</label>
+        <br>
+        <select id="UnitFrom" name="UnitFrom">
+          <option value="celsius" >Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>   
+    
+        <br>
+
+    <label for="UnitTo">Unit to Convert to:</label><br>
+    <select id="UnitTo" name="UnitTo">
+          <option value="celsius" >Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+         
+    </select>
+        <br><br>
+        <input type="submit" value="Convert">
+    </form>         
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.categories {
+    color: black;
+    display: flex; /* Display categories horizontally */
+    gap: 20px; /* Space between categories */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0; /* Remove ขอบนอก */
+    padding: 0; /* Remove  ขอบใน*/
+    overflow: hidden;
+    background-color: #333;
+    color: #ffffff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}

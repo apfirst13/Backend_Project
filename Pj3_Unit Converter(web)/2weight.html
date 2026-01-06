@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="action_length.php">
+    <link rel="stylesheet" href="action_weigth.php">
+    <link rel="stylesheet" href="action_temp.php">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="length.html">
+    <link rel="stylesheet" href="weight.html">
+    <link rel="stylesheet" href="temp.html">
+    <title>Unit Converter</title>
+
+</head>
+
+<body>
+    <h1>Unit Converter</h1>
+  
+    <ul>
+        <li><a href="1index.html" target="_self">Length</a></li>
+        <li><a href="2weight.html"target="_self">Weight</a></li>
+        <li><a href="3temp.html" target="_self">Temperature</a></li>
+        
+    </ul>
+
+    <form action="action_weight.php" method="get">
+
+        <label for="Weight">Enter the weight to convert:
+        </label><br>
+        <input type="text" id="Length" name="Length" >
+        <br>
+        <label for="UnitFrom">Unit to Convert From:</label>
+        <br>
+        <select id="UnitFrom" name="UnitFrom">
+            <option value="milligram" >Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+        </select>   
+    
+        <br>
+
+    <label for="UnitTo">Unit to Convert to:</label><br>
+    <select id="UnitTo" name="UnitTo">
+        <option value="milligram" >Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+    </select>
+        <br><br>
+        <input type="submit" value="Convert">
+    </form>         
+
+</body>
+
+</html>

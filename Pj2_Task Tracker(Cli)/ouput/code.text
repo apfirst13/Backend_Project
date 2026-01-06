@@ -1,0 +1,12 @@
+###func progress
+
+-start done,reset
+python main.py start 0     # เปลี่ยน status เป็น in-progress
+python main.py done 0      # เปลี่ยน status เป็น done
+
+start = inprogress
+
+
+
+promt ---> python main.py [start,done]
+-
