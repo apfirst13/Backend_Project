@@ -4,6 +4,11 @@ const fs = require('node:fs'); // เพิ่มบรรทัดนี้: fs
 const app = express();
 app.set('view engine', 'ejs');
 
+app.set('view engine', 'ejs');
+
+// เพิ่มบรรทัดนี้: อนุญาตให้อ่านข้อมูลจากฟอร์ม HTML ได้
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
     // 1. Backend เดินไปอ่านไฟล์ posts.json
     const rawData = fs.readFileSync('./data/posts.json');
