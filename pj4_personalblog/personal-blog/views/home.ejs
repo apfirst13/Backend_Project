@@ -14,9 +14,11 @@
     <ul>
         <% posts.forEach(post=> { %>
             <li>
-                <strong>
-                    <%= post.title %>
-                </strong> <br>
+                <a href="/article/<%= post.id %>">
+                    <strong>
+                        <%= post.title %>
+                    </strong>
+                </a> <br>
                 <small>วันที่: <%= post.date %></small>
             </li>
             <br>
