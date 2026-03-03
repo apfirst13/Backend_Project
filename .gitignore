@@ -1,0 +1,5 @@
+# ซ่อนไฟล์ test.ipynb ในโฟลเดอร์ pj1
+pj1Num_guess_project/test.ipynb
+
+# # หรือถ้าอยากซ่อนไฟล์ .ipynb ทุกไฟล์ในโปรเจค
+# *.ipynb
