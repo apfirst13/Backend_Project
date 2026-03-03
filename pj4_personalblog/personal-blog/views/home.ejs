@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Personal Blog</title>
 </head>
+
 <body>
-    
+    <h1>Welcome to My Personal Blog</h1>
+    <hr>
+
+    <h2>บทความล่าสุด</h2>
+    <ul>
+        <% posts.forEach(post=> { %>
+            <li>
+                <strong>
+                    <%= post.title %>
+                </strong> <br>
+                <small>วันที่: <%= post.date %></small>
+            </li>
+            <br>
+            <% }) %>
+    </ul>
 </body>
+
 </html>

@@ -1,16 +1,20 @@
 const express = require('express');
-const app = express();
+const fs = require('fs'); // 👈 เพิ่มบรรทัดนี้: fs ย่อมาจาก File System เอาไว้อ่านไฟล์ในเครื่อง
 
-// บอกให้ Express รู้ว่าเราจะใช้ EJS เป็นตัวสร้างหน้าเว็บนะ
+const app = express();
 app.set('view engine', 'ejs');
 
-// ดักจับ Request ที่เข้ามาหน้า Home (URL: / )
 app.get('/', (req, res) => {
-    // เปลี่ยนจาก res.send เป็น res.render เพื่อส่งไฟล์ home.ejs ไปให้ลูกค้า
-    res.render('home'); 
+    // 1. Backend เดินไปอ่านไฟล์ posts.json
+    const rawData = fs.readFileSync('./data/posts.json');
+    
+    // 2. แปลงข้อความ JSON ให้เป็นข้อมูลที่ JavaScript เอาไปใช้งานได้
+    const posts = JSON.parse(rawData);
+    
+    // 3. ส่งข้อมูลที่ชื่อว่า posts แนบไปกับไฟล์ home.ejs
+    res.render('home', { posts: posts }); 
 });
 
-// เปิด Server รอรับลูกค้าที่พอร์ต 3000
 app.listen(3000, () => {
     console.log('Server is running at http://localhost:3000');
 });
