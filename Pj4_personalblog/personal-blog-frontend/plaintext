@@ -1,0 +1,33 @@
+Backend_Project/
+│
+├── Pj4_personalblog/ (Backend API & Admin Dashboard)
+│   ├── node_modules/
+│   ├── routes/
+│   │   ├── admin.js (ระบบจัดการข้อมูล CRUD ฝั่ง Admin)
+│   │   ├── auth.js (Middleware ตรวจสอบสิทธิ์การเข้าถึง)
+│   │   └── blog.js (ระบบดึงข้อมูลบทความและ API ของ React)
+│   ├── views/
+│   │   ├── admin.ejs (หน้าหลักระบบหลังบ้าน)
+│   │   ├── article.ejs (หน้าอ่านบทความระบบเก่า)
+│   │   ├── edit.ejs (หน้าฟอร์มแก้ไขบทความ)
+│   │   ├── home.ejs (หน้าแรกระบบเก่า)
+│   │   └── login.ejs (หน้าฟอร์มล็อกอินสำหรับ Admin)
+│   ├── .env (ไฟล์เก็บค่าคอนฟิกและความลับของระบบ)
+│   ├── .gitignore (ไฟล์ระบุสิ่งที่ไม่ต้องการนำขึ้น Git)
+│   ├── db.js (โมดูลสำหรับเชื่อมต่อ PostgreSQL Pool)
+│   ├── package.json
+│   └── server.js (ไฟล์หลักสำหรับรัน Express Server)
+│
+└── personal-blog-frontend/ (Frontend SPA)
+    ├── node_modules/
+    ├── src/
+    │   ├── pages/
+    │   │   ├── Article.jsx (หน้าอ่านบทความฉบับเต็ม)
+    │   │   └── Home.jsx (หน้าแรกแสดงรายการบทความทั้งหมด)
+    │   ├── App.jsx (ไฟล์ศูนย์กลางจัดการเส้นทางด้วย React Router)
+    │   ├── index.css (ไฟล์จัดการสไตล์หลักที่นำเข้า Tailwind CSS)
+    │   └── main.jsx
+    ├── index.html
+    ├── package.json
+    ├── postcss.config.js (ไฟล์คอนฟิกตัวแปลงสไตล์)
+    └── vite.config.js (ไฟล์คอนฟิกของระบบ Vite)

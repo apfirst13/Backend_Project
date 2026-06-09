@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Add Post</title>
+</head>
+
+<body>
+    <h1>ระบบ Admin: เพิ่มบทความใหม่</h1>
+    <hr>
+
+    <form action="/admin/add" method="POST">
+        <label>ชื่อบทความ:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>เนื้อหาบทความ:</label><br>
+        <textarea name="content" rows="6" cols="50" required></textarea><br><br>
+
+        <button type="submit">บันทึกบทความ</button>
+    </form>
+
+    <br>
+    <a href="/"> กลับหน้าแรก</a>
+
+    <hr>
+    <h2>รายการบทความทั้งหมด</h2>
+    <ul>
+        <% posts.forEach(post=> { %>
+            <li style="margin-bottom: 10px;">
+                <strong>
+                    <%= post.title %>
+                </strong>
+                <a href="/admin/edit/<%= post.id %>">แก้ไข</a>
+                
+                <form action="/admin/delete/<%= post.id %>" method="POST" style="display:inline;">
+                    <button type="submit">ลบ</button>
+                </form>
+            </li>
+            <% }) %>
+    </ul>
+    
+</body>
+
+</html>
