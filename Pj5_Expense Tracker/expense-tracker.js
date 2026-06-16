@@ -1,6 +1,6 @@
 #!/user/bin/ env node
 
-const { command } = require('commander')
+const { command, program } = require('commander')
 const fs = require('fs');
 const path = require('path');
 
@@ -22,3 +22,31 @@ function readExpenses() {
         return [];
     }
 }
+
+
+function writeExpenses(expenses) {
+    // แปลง array กลับเป็นข้อมความ json (ใส่  null , 2  เพื่อให้เว้นบรรทัดอ่านง่าย)
+    // บันทึกทับไฟล์เดิมทั้งหมด
+    fs.writeFileSync(DATA_FILE, JSON.stringigy(expenses, null, 2));
+}
+
+function getCurrentData() {
+    const today = new Date();
+    return today.tolSOSting().split('T')[0];
+}
+
+program
+    .name('expense-tracker')
+    .description('CLI Application to manage your personal finances')
+    .version('1.0.0')
+
+program 
+    .command('add')
+    .description('Add a new expense')
+    .requiredOption('-d --description </text>', 'Description of the expense')
+    .requiredOption('-a, --amount </numbr>', 'Amount of the expense')
+    .action((options) => {
+
+        const amount = parseloat(options.amount);
+        if (isNaN(amount)  || amount)
+    })

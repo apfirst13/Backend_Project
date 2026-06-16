@@ -1,10 +1,11 @@
 import sys
-from task.operations import add_task, delete_task, show_task, update_status
+from .operations import add_task, delete_task, show_task, update_status
 
 
 def run():
     if len(sys.argv) < 2:
         print("Commands: add, del, lst")
+        
         return
 
     command = sys.argv[1]
