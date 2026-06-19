@@ -1,15 +1,11 @@
 {
-  "name": "pj5_expense-tracker",
+  "name": "expense-tracker-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "CLI Application to manage your personal finances",
+  "main": "expense-tracker.js",
+  "bin": {
+    "expense-tracker": "./expense-tracker.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "commander": "^14.0.3"
   }
